@@ -17,18 +17,45 @@ public class Main {
         double average = 0;
         double smallest = 0;
         //todo дописать логику программы ниже.
+        if ((first > second) && (first > third)) {
+            greatest = first;
+            if (second > third) {
+                average = second;
+                smallest = third;
+            }
+            else if (third > second) {
+                average = third;
+                smallest = second;
+            }
+        }
 
+        else if ((second > first) && (second > third)) {
+            greatest = second;
+            if (first > third) {
+                average = first;
+                smallest = third;
+            }
+            else if (third > first) {
+                average = third;
+                smallest = first;
+            }
+        }
+        else if ((third > first) && (third > second)) {
+            greatest = third;
+            if (first > second) {
+                average = first;
+                smallest = second;
+            }
+            else if (second > first) {
+                average = second;
+                smallest = first;
+            }
+        }
 
-
-
-
-
-
-        //todo
-
-
-        System.out.println("Наибольший вес: " + 10);
-        System.out.println("Средний вес: " + 9);
-        System.out.println("Наименьший вес: " + 1);
-    }
+            //todo
+            System.out.println("Наибольший вес: " + greatest);
+            System.out.println("Средний вес: " + average);
+            System.out.println("Наименьший вес: " + smallest);
+        }
 }
+
